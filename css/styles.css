@@ -856,11 +856,15 @@ i{
  
   .landing-section {
     width: 100%;
-    height: calc(85vh - 170px);
+    height: 10%;
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto;
     margin-bottom: 80px;
+  }
+
+  .skills-section{
+    height: 7%
   }
   .desktop-subtitle {
     width: 100%;
