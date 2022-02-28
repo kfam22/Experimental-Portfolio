@@ -847,7 +847,7 @@ i{
 @media (min-width: 1920px) {
   .page-content {
     padding: 120px 12.5% 120px 12.5%;
-    height: 250rem;
+    height: 160rem;
   }
 
   .page-content h2{
@@ -872,7 +872,7 @@ i{
   }
 
   #skills-section{
-    height: 6%
+    height: 10%
   }
   .desktop-subtitle {
     width: 100%;
