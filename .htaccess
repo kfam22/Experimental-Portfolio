@@ -1,22 +1,32 @@
 # mod_rewrite
 
-RewriteEngine on
+# RewriteEngine On
 
 #does not apply to existing directories; if the folder exists on the server, don't change anything and don't run the rule
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} .html -f
 
 #Check for file in directory with .html extension
 
-RewriteCond %{REQUEST_FILENAME}\.html -f
+# RewriteCond %{REQUEST_FILENAME}\.html -f
 
 #here we show the page that hs the .html extension
 
-RewriteRule ^(.*)$ $1.html [NC,L]
+# RewriteRule ^(.*)$ $1.html [NC,L]
+
 
 # RewriteCond %{THE_REQUEST} /([^.])\.html [NC]
 
 # RewriteRule ^ /%1[NC,L,R]
 # RewriteCond %{REQUEST_FILENAME}.html -f
 # RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
