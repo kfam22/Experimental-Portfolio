@@ -151,6 +151,9 @@ img {
    .details li {
      font-size: 18px;
    }
+   .resume {
+    margin: 0 30rem;
+  }
  }
  
  @media (min-width: 576px) and (max-width: 991px) {
