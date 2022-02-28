@@ -983,6 +983,10 @@ i{
     width: calc(100% - 32px);
     margin: 0px 16px;
   }
+
+  .resume {
+    margin: 0 30rem;
+  }
 }
 
 /* MOBILE PROJECT PREVIEW STYLING */
