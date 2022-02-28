@@ -845,8 +845,12 @@ i{
 }
 
 @media (min-width: 1920px) {
-  #landing-page-btm {
+  .page-content {
     padding: 120px 12.5% 120px 12.5%;
+    height: auto;
+  }
+
+  #landing-page-btm{
     height: 160rem;
   }
 
