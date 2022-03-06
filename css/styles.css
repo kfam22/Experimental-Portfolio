@@ -637,8 +637,18 @@ i{
   margin-left: 2%;
 }
 
+i:hover {
+  transition: all 0.3s ease;
+  padding-left: 8px;
+}
+
 .project-arrow{
   margin-left:2%;
+}
+
+.project-link{
+  text-decoration: none;
+  color: black;
 }
 
 .project-title{
@@ -1195,34 +1205,34 @@ i{
   justify-content: center;
 }
 
-#impressions-full-project {
+#full-project1 {
   border: 1px solid #eb4733;
   color: #eb4733;
 }
 
-#impressions-full-project:hover {
+#full-project1:hover {
   background-color: #eb4733;
   color: white;
   border: 1px solid #eb4733;
 }
 
-#portal-full-project {
+#full-project2 {
   border: 1px solid #23443e;
   color: #23443e;
 }
 
-#portal-full-project:hover {
+#full-project2:hover {
   background-color: #23443e;
   color: white;
   border: 1px solid #23443e;
 }
 
-#fca-full-project {
+#full-project3 {
   border: 1px solid #f6c744;
   color: #f6c744;
 }
 
-#fca-full-project:hover {
+#full-project3:hover {
   background-color: #f6c744;
   color: white;
   border: 1px solid #f6c744;
