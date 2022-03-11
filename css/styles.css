@@ -1136,7 +1136,7 @@ i:hover {
   margin: 0px;
 }
 
-#portal-project-preview {
+#project2-project-preview {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -1144,7 +1144,7 @@ i:hover {
   /*display: none;*/
 }
 
-#fca-project-preview {
+#project3-project-preview {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -1252,68 +1252,68 @@ i:hover {
 }
 
 /*(for animation)*/
-#impressions-project-preview .left-project-preview.animate-on-scroll{
+#project1-project-preview .left-project-preview.animate-on-scroll{
   transform: translateX(-100%);
   opacity: 0;
   transition: all 0.75s ease-in-out;
 }
 
-#impressions-project-preview .right-project-preview.animate-on-scroll{
+#project1-project-preview .right-project-preview.animate-on-scroll{
   transform: translateY(100%);
   opacity: 0;
   transition: all 0.75s ease-in-out;
 }
 
-#impressions-project-preview .left-project-preview.animate-on-scroll.animate {
+#project1-project-preview .left-project-preview.animate-on-scroll.animate {
   transform: translateX(0);
   opacity: 1;
 }
 
-#impressions-project-preview .right-project-preview.animate-on-scroll.animate {
+#project1-project-preview .right-project-preview.animate-on-scroll.animate {
   transform: translateY(0);
   opacity: 1;
 }
 
-#portal-project-preview .left-project-preview{
+#project2-project-preview .left-project-preview{
   transform: translateX(-100%);
   opacity: 0;
   transition: all 0.75s ease-in-out;
 }
 
-#portal-project-preview .right-project-preview {
+#project2-project-preview .right-project-preview {
   transform: translateY(100%);
   opacity: 0;
   transition: all 0.75s ease-in-out;
 }
 
-#portal-project-preview .left-project-preview.animate {
+#project2-project-preview .left-project-preview.animate {
   transform: translateX(0);
   opacity: 1;
 }
 
-#portal-project-preview .right-project-preview.animate {
+#project2-project-preview .right-project-preview.animate {
   transform: translateY(0);
   opacity: 1;
 }
 
-#fca-project-preview .left-project-preview{
+#project3-project-preview .left-project-preview{
   transform: translateX(-100%);
   opacity: 0;
   transition: all 0.75s ease-in-out;
 }
 
-#fca-project-preview .right-project-preview {
+#project3-project-preview .right-project-preview {
   transform: translateY(100%);
   opacity: 0;
   transition: all 0.75s ease-in-out;
 }
 
-#fca-project-preview .left-project-preview.animate {
+#project3-project-preview .left-project-preview.animate {
   transform: translateX(0);
   opacity: 1;
 }
 
-#fca-project-preview .right-project-preview.animate {
+#project3-project-preview .right-project-preview.animate {
   transform: translateY(0);
   opacity: 1;
 }

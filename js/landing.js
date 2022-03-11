@@ -15,17 +15,17 @@ const landingGreyText = document.querySelector(".landing-intro h1");
 
 var faders = document.querySelectorAll(".will-fade");
 
-var triggerItem = document.querySelector("#impressions-project-preview");
-var impressionsLeft = document.querySelector("#impressions-project-preview .left-project-preview");
-var impressionsRight = document.querySelector("#impressions-project-preview .right-project-preview");
-var fcaRight = document.querySelector("#portal-project-preview .right-project-preview");
-var fcaLeft = document.querySelector("#portal-project-preview .left-project-preview");
-var thirdspaceRight = document.querySelector("#fca-project-preview .right-project-preview");
-var thirdspaceLeft = document.querySelector("#fca-project-preview .left-project-preview");
-var impressionsPreview = document.querySelector("#impressions-project-preview");
-var fcaPreview = document.querySelector("#portal-project-preview");
-var thirdspacePreview = document.querySelector("#fca-project-preview");
-var previewItem = "impressions";
+var triggerItem = document.querySelector("#project1-project-preview");
+var project1Left = document.querySelector("#project1-project-preview .left-project-preview");
+var project1Right = document.querySelector("#project1-project-preview .right-project-preview");
+var project3Right = document.querySelector("#project2-project-preview .right-project-preview");
+var project3Left = document.querySelector("#project2-project-preview .left-project-preview");
+var thirdspaceRight = document.querySelector("#project3-project-preview .right-project-preview");
+var thirdspaceLeft = document.querySelector("#project3-project-preview .left-project-preview");
+var project1Preview = document.querySelector("#project1-project-preview");
+var project3Preview = document.querySelector("#project2-project-preview");
+var thirdspacePreview = document.querySelector("#project3-project-preview");
+var previewItem = "project1";
 var button1 = document.querySelector("#button-1");
 var button2 = document.querySelector("#button-2");
 var button3 = document.querySelector("#button-3");
@@ -105,32 +105,32 @@ landingContent2.addEventListener("click", function() {
 // DESKTOP PROJECT PREVIEW
 // scrollInner.style.paddingBottom = ((window.innerHeight - previewContainer.clientHeight) / 2) + "px";
 
-function impressionsAnimate() {
-  impressionsPreview.style.zIndex = "1";
-  impressionsRight.classList.add("animate");
-  impressionsLeft.classList.add("animate");
-  previewItem = "impressions";
+function project1Animate() {
+  project1Preview.style.zIndex = "1";
+  project1Right.classList.add("animate");
+  project1Left.classList.add("animate");
+  previewItem = "project1";
 }
 
-function impressionsUnanimate() {
-  impressionsLeft.classList.add("animate-on-scroll");
-  impressionsRight.classList.add("animate-on-scroll");
-  impressionsPreview.style.zIndex = "-1";
-  impressionsRight.classList.remove("animate");
-  impressionsLeft.classList.remove("animate");
+function project1Unanimate() {
+  project1Left.classList.add("animate-on-scroll");
+  project1Right.classList.add("animate-on-scroll");
+  project1Preview.style.zIndex = "-1";
+  project1Right.classList.remove("animate");
+  project1Left.classList.remove("animate");
 }
 
-function fcaAnimate() {
-  fcaPreview.style.zIndex = "1";
-  fcaRight.classList.add("animate");
-  fcaLeft.classList.add("animate");
-  previewItem = "fca"; 
+function project3Animate() {
+  project3Preview.style.zIndex = "1";
+  project3Right.classList.add("animate");
+  project3Left.classList.add("animate");
+  previewItem = "project3"; 
 }
 
-function fcaUnanimate() {
-  fcaPreview.style.zIndex = "-1";
-  fcaRight.classList.remove("animate");
-  fcaLeft.classList.remove("animate");
+function project3Unanimate() {
+  project3Preview.style.zIndex = "-1";
+  project3Right.classList.remove("animate");
+  project3Left.classList.remove("animate");
 }
 
 function thirdspaceAnimate() {
@@ -151,11 +151,11 @@ button1.addEventListener("click", function() {
   button1.style.backgroundColor = "rgba(113,121,143, 1)";
   button2.style.backgroundColor = "rgba(113,121,143, 0.1)";
   button3.style.backgroundColor = "rgba(113,121,143, 0.1)";
-  if (previewItem === "fca") {
-    impressionsAnimate();
-    fcaUnanimate();
+  if (previewItem === "project3") {
+    project1Animate();
+    project3Unanimate();
   } else if (previewItem === "thirdspace") {
-    impressionsAnimate();
+    project1Animate();
     thirdspaceUnanimate();
   }
 })
@@ -164,11 +164,11 @@ button2.addEventListener("click", function() {
   button2.style.backgroundColor = "rgba(113,121,143, 1)";
   button3.style.backgroundColor = "rgba(113,121,143, 0.1)";
   button1.style.backgroundColor = "rgba(113,121,143, 0.1)";
-  if (previewItem === "impressions") {
-    fcaAnimate();
-    impressionsUnanimate();       
+  if (previewItem === "project1") {
+    project3Animate();
+    project1Unanimate();       
   } else if (previewItem === "thirdspace") {
-    fcaAnimate();
+    project3Animate();
     thirdspaceUnanimate();  
   }
 });
@@ -177,12 +177,12 @@ button3.addEventListener("click", function() {
   button3.style.backgroundColor = "rgba(113,121,143, 1)";
   button1.style.backgroundColor = "rgba(113,121,143, 0.1)";
   button2.style.backgroundColor = "rgba(113,121,143, 0.1)";
-  if (previewItem === "impressions") {
+  if (previewItem === "project1") {
     thirdspaceAnimate();
-    impressionsUnanimate();
-  } else if (previewItem === "fca") {
+    project1Unanimate();
+  } else if (previewItem === "project3") {
     thirdspaceAnimate();
-    fcaUnanimate()
+    project3Unanimate()
   }
 })
 
@@ -192,15 +192,15 @@ const animateOptions = {
 };
 
 const animateOnScroll = new IntersectionObserver(function(entries, animateOnScroll) {
-  impressionsLeft.classList.add("animate-on-scroll");
-  impressionsRight.classList.add("animate-on-scroll");
+  project1Left.classList.add("animate-on-scroll");
+  project1Right.classList.add("animate-on-scroll");
   previewContainer.classList.add("fade-in");
   if (!entries[0].isIntersecting) {
     return;
   } else {
     previewContainer.classList.add("apply");
-    impressionsLeft.classList.add("animate");
-    impressionsRight.classList.add("animate");
+    project1Left.classList.add("animate");
+    project1Right.classList.add("animate");
     animateOnScroll.unobserve(entries[0].target);
   }
 }, animateOptions);
@@ -249,11 +249,11 @@ window.addEventListener("scroll", function() {
     button1.style.backgroundColor = "rgba(113,121,143, 1)";
     button2.style.backgroundColor = "rgba(113,121,143, 0.1)";
     button3.style.backgroundColor = "rgba(113,121,143, 0.1)";
-    if (previewItem === "fca") {
-      impressionsAnimate();
-      fcaUnanimate();
+    if (previewItem === "project3") {
+      project1Animate();
+      project3Unanimate();
     } else if (previewItem === "thirdspace") {
-      impressionsAnimate();
+      project1Animate();
       thirdspaceUnanimate();
     }
   } 
@@ -261,11 +261,11 @@ window.addEventListener("scroll", function() {
     button2.style.backgroundColor = "rgba(113,121,143, 1)";
     button3.style.backgroundColor = "rgba(113,121,143, 0.1)";
     button1.style.backgroundColor = "rgba(113,121,143, 0.1)";
-    if (previewItem === "impressions") {
-      fcaAnimate();
-      impressionsUnanimate();       
+    if (previewItem === "project1") {
+      project3Animate();
+      project1Unanimate();       
     } else if (previewItem === "thirdspace") {
-      fcaAnimate();
+      project3Animate();
       thirdspaceUnanimate();  
     }
   } 
@@ -273,12 +273,12 @@ window.addEventListener("scroll", function() {
     button3.style.backgroundColor = "rgba(113,121,143, 1)";
     button1.style.backgroundColor = "rgba(113,121,143, 0.1)";
     button2.style.backgroundColor = "rgba(113,121,143, 0.1)";
-    if (previewItem === "impressions") {
+    if (previewItem === "project1") {
       thirdspaceAnimate();
-      impressionsUnanimate();
-    } else if (previewItem === "fca") {
+      project1Unanimate();
+    } else if (previewItem === "project3") {
       thirdspaceAnimate();
-      fcaUnanimate()
+      project3Unanimate()
     }
   }
 });

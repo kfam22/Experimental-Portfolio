@@ -7,6 +7,7 @@ img {
  .resume{
    box-shadow: none;
    margin: 0 20rem;
+   margin-bottom: 4rem;
  }
  a {
    color: black;
@@ -70,6 +71,13 @@ img {
    background-position: 60% 100%;
    background-size: auto 100%;
  }
+
+ #project3-image {
+  /* background-image: url(../assets/plants-01.svg); */
+  background-repeat: no-repeat;
+  background-position: 60% 100%;
+  background-size: auto 100%;
+}
  
  .project-info {
    box-sizing: border-box;
@@ -325,6 +333,12 @@ img {
      font-weight: 700;
      line-height: 1.5em;
      margin-bottom: 4px;
+   }
+ }
+
+ @media (min-width: 992px) and (max-width: 1399px){
+   .resume{
+     margin: 0 20%;
    }
  }
  
