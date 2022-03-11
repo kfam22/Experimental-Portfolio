@@ -655,6 +655,12 @@ i:hover {
   display:flex;
 }
 
+.projectWithLink{
+  line-height: 1.5em;
+  margin-bottom: 36px;
+  display: block;
+}
+
 .stack-container {
   display: flex;
   flex-wrap: wrap;
