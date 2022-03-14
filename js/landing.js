@@ -129,11 +129,24 @@ function project1Unanimate() {
   project1Left.classList.remove("animate");
 }
 
+function project2Animate() {
+  project2Preview.style.zIndex = "1";
+  project2Right.classList.add("animate");
+  project2Left.classList.add("animate");
+  previewItem = "project2"; 
+}
+
+function project2Unanimate() {
+  project2Preview.style.zIndex = "-1";
+  project2Right.classList.remove("animate");
+  project2Left.classList.remove("animate");
+}
+
 function project3Animate() {
   project3Preview.style.zIndex = "1";
   project3Right.classList.add("animate");
-  project3Left.classList.add("animate");
-  previewItem = "project3"; 
+  project3Left.classList.add("animate");    
+  previewItem = "project3";
 }
 
 function project3Unanimate() {
@@ -142,30 +155,17 @@ function project3Unanimate() {
   project3Left.classList.remove("animate");
 }
 
-function thirdspaceAnimate() {
-  thirdspacePreview.style.zIndex = "1";
-  thirdspaceRight.classList.add("animate");
-  thirdspaceLeft.classList.add("animate");    
-  previewItem = "thirdspace";
-}
-
-function thirdspaceUnanimate() {
-  thirdspacePreview.style.zIndex = "-1";
-  thirdspaceRight.classList.remove("animate");
-  thirdspaceLeft.classList.remove("animate");
-}
-
 // (button functions)
 button1.addEventListener("click", function() {
   button1.style.backgroundColor = "rgba(113,121,143, 1)";
   button2.style.backgroundColor = "rgba(113,121,143, 0.1)";
   button3.style.backgroundColor = "rgba(113,121,143, 0.1)";
-  if (previewItem === "project3") {
+  if (previewItem === "project2") {
+    project1Animate();
+    project2Unanimate();
+  } else if (previewItem === "project3") {
     project1Animate();
     project3Unanimate();
-  } else if (previewItem === "thirdspace") {
-    project1Animate();
-    thirdspaceUnanimate();
   }
 })
 
@@ -174,11 +174,11 @@ button2.addEventListener("click", function() {
   button3.style.backgroundColor = "rgba(113,121,143, 0.1)";
   button1.style.backgroundColor = "rgba(113,121,143, 0.1)";
   if (previewItem === "project1") {
-    project3Animate();
+    project2Animate();
     project1Unanimate();       
-  } else if (previewItem === "thirdspace") {
-    project3Animate();
-    thirdspaceUnanimate();  
+  } else if (previewItem === "project3") {
+    project2Animate();
+    project3Unanimate();  
   }
 });
 
@@ -187,11 +187,11 @@ button3.addEventListener("click", function() {
   button1.style.backgroundColor = "rgba(113,121,143, 0.1)";
   button2.style.backgroundColor = "rgba(113,121,143, 0.1)";
   if (previewItem === "project1") {
-    thirdspaceAnimate();
+    project3Animate();
     project1Unanimate();
-  } else if (previewItem === "project3") {
-    thirdspaceAnimate();
-    project3Unanimate()
+  } else if (previewItem === "project2") {
+    project3Animate();
+    project2Unanimate()
   }
 })
 
@@ -260,10 +260,10 @@ window.addEventListener("scroll", function() {
     button3.style.backgroundColor = "rgba(113,121,143, 0.1)";
     if (previewItem === "project3") {
       project1Animate();
-      project3Unanimate();
+      project2Unanimate();
     } else if (previewItem === "thirdspace") {
       project1Animate();
-      thirdspaceUnanimate();
+      project3Unanimate();
     }
   } 
   if (window.pageYOffset >= (previewHeight + window.innerHeight * 0.75) && window.pageYOffset < (previewHeight + window.innerHeight * 1.5)) {
@@ -271,11 +271,11 @@ window.addEventListener("scroll", function() {
     button3.style.backgroundColor = "rgba(113,121,143, 0.1)";
     button1.style.backgroundColor = "rgba(113,121,143, 0.1)";
     if (previewItem === "project1") {
-      project3Animate();
+      project2Animate();
       project1Unanimate();       
     } else if (previewItem === "thirdspace") {
-      project3Animate();
-      thirdspaceUnanimate();  
+      project2Animate();
+      project3Unanimate();  
     }
   } 
   if (window.pageYOffset >= (previewHeight + window.innerHeight * 1.5)) {
@@ -283,11 +283,11 @@ window.addEventListener("scroll", function() {
     button1.style.backgroundColor = "rgba(113,121,143, 0.1)";
     button2.style.backgroundColor = "rgba(113,121,143, 0.1)";
     if (previewItem === "project1") {
-      thirdspaceAnimate();
+      project3Animate();
       project1Unanimate();
     } else if (previewItem === "project3") {
-      thirdspaceAnimate();
-      project3Unanimate()
+      project3Animate();
+      project2Unanimate()
     }
   }
 });
