@@ -111,6 +111,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   opacity: 0;
+  cursor: pointer;
   animation: fadeIn 0.75s ease-in-out;
   animation-delay: 2.6s;
   animation-fill-mode: forwards;

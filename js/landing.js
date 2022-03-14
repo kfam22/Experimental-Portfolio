@@ -18,13 +18,13 @@ var faders = document.querySelectorAll(".will-fade");
 var triggerItem = document.querySelector("#project1-project-preview");
 var project1Left = document.querySelector("#project1-project-preview .left-project-preview");
 var project1Right = document.querySelector("#project1-project-preview .right-project-preview");
-var project3Right = document.querySelector("#project2-project-preview .right-project-preview");
-var project3Left = document.querySelector("#project2-project-preview .left-project-preview");
-var thirdspaceRight = document.querySelector("#project3-project-preview .right-project-preview");
-var thirdspaceLeft = document.querySelector("#project3-project-preview .left-project-preview");
+var project2Right = document.querySelector("#project2-project-preview .right-project-preview");
+var project2Left = document.querySelector("#project2-project-preview .left-project-preview");
+var project3Right = document.querySelector("#project3-project-preview .right-project-preview");
+var project3Left = document.querySelector("#project3-project-preview .left-project-preview");
 var project1Preview = document.querySelector("#project1-project-preview");
-var project3Preview = document.querySelector("#project2-project-preview");
-var thirdspacePreview = document.querySelector("#project3-project-preview");
+var project2Preview = document.querySelector("#project2-project-preview");
+var project3Preview = document.querySelector("#project3-project-preview");
 var previewItem = "project1";
 var button1 = document.querySelector("#button-1");
 var button2 = document.querySelector("#button-2");
@@ -54,15 +54,18 @@ var prevScrollpos = window.pageYOffset;
 
     if(window.scrollY >= topOfNav) {
       if (mediaSize <= 575) {
+        //if scrolling up nav is placed at the top of screen
         if (prevScrollpos > currentScrollpos) {
           nav1.style.transform = "translateY(0px)";
           nav2.style.transform = "translateY(0px)";
           desktopNav.style.transform = "translateY(0px)";
         } else {
+          // if scrolling down, nav is pushed out of view
           nav1.style.transform = "translateY(-" + nav1.clientHeight + "px)";
           nav2.style.transform = "translateY(-" + nav1.clientHeight + "px)";
           desktopNav.style.transform = "translateY(-" + nav1.clientHeight + "px)";
         }
+        // when scrolling stops, update previous scroll position is updated
         prevScrollpos = currentScrollpos;
       }
     } 
@@ -70,10 +73,12 @@ var prevScrollpos = window.pageYOffset;
 
 // LANDING TEXT POSITION
 window.addEventListener("scroll", function() {
+  // if scroll position is below the landing top..
   if (window.scrollY >= topOfNav - window.innerHeight) {
     landingContent.style.position = "absolute";
     landingContent.style.bottom = "0";
     landingContent.style.top = "auto";
+    // scroll and arrow disappear on scroll
     landingContent2.style.opacity = "0";
     landingContent2.style.animationFillMode = "none";
   } else {
@@ -85,13 +90,17 @@ window.addEventListener("scroll", function() {
 // LANDING BACKGROUND COLOR
 window.addEventListener("scroll", function() {
   if (window.scrollY >= landingSection.offsetHeight * (0.9)) {
+    // if scroll position is at 90% of landing section, fade out
     landingSection.classList.add("change-color");
     landingGreyText.classList.add("change-text-color");
+    //  fade in nav
     landingNavLeft.style.opacity = "1";
     landingNavRight.style.opacity = "1";
   } else if (window.scrollY < landingSection.offsetHeight) {
+    // fade in landing section color
     landingSection.classList.remove("change-color");
     landingGreyText.classList.remove("change-text-color");
+    // fade out nav
     landingNavLeft.style.opacity = "0";
     landingNavRight.style.opacity = "0";
   }
