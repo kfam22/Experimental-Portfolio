@@ -698,9 +698,9 @@ i:hover {
   .small-subtitle{
     display: none;
   }
-.skills{
+/* .skills{
   padding-right: 1.3rem;
-}
+} */
 .page-content h2{
   margin-bottom: 3%;
   margin-top: 4%;
@@ -744,7 +744,7 @@ i:hover {
 
 @media (min-width: 992px) and (max-width: 1919px){
   .page-content {
-    padding: 80px 18% 100px 12.5%;
+    padding: 80px 18% 2% 12.5%;
   }
   
   .landing-section {
@@ -763,7 +763,7 @@ i:hover {
     font-size: 1rem;
     line-height: 1.5em;
     box-sizing: border-box;
-    margin: 0px 0px 100px 0px;
+    margin: 0px 0px 2% 0px;
   }
   .landing-subtitle {
     margin-bottom: 0px;
@@ -903,7 +903,7 @@ i:hover {
     font-size: 1.4rem;
     line-height: 1.5em;
     box-sizing: border-box;
-    margin: 0px 0px 100px 0px;
+    margin: 0px 0px 2% 0px;
   }
   .landing-subtitle {
     margin-bottom: 0px;
