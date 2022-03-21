@@ -21,6 +21,10 @@ body {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: #ffdc00;
+}
+
 /* LANDING PAGE STYLING */
 .landing {
   width: 100%;
