@@ -117,6 +117,8 @@
   @media (min-width: 576px) and (max-width: 991px) {
     .about-image img {
       margin: 0 auto;
+      width: 44em;
+      height: 40em;
     }
   }
   
