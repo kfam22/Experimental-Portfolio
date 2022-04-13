@@ -15,7 +15,7 @@ const setNewCurrentButton = (nextCurrent) => {
     currentButton = nextCurrent;
     currentButton.classList.add('selected-emoji')
 
-    if(techButton === currentButton) aboutImg.src="/assets/kf.png";
+    if(techButton === currentButton) aboutImg.src="/assets/kf.jpg";
     if(dogButton === currentButton) aboutImg.src="/assets/blue.jpg";
     if(threadButton === currentButton) aboutImg.src="/assets/creativekayla.jpg";
     if(babyButton === currentButton) aboutImg.src="/assets/babykayla.JPG"; 
