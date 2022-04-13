@@ -110,7 +110,7 @@
 
   @media (max-width: 576px) {
     .about-image img{
-      width: 23em;
+      width: 22em;
       height: 26em;
     }
     #emoji-buttons{
