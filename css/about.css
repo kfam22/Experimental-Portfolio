@@ -126,14 +126,15 @@
     
     .about-image {
       margin-bottom: 60px;
+      padding-right: 5%;
     }
     .about-content {
       box-sizing: border-box;
-      padding: 0px;
+      padding-left: 0px;
       width: auto;
-      display: grid;
-      grid-template-columns: 44.444% 44.444%;
-      grid-gap: 0px 5%;
+      display: flex;
+      /* grid-template-columns: 44.444% 44.444%;
+      grid-gap: 0px 5%; */
     }
     .about-text p {
       line-height: 30px;
