@@ -9,6 +9,16 @@
     animation-delay: 0.3s;
     animation-fill-mode: forwards;
   }
+
+  .about-link {
+    font-weight: bold;
+    color: #2349ea;
+    text-decoration: none;
+  }
+
+  .about-link:hover {
+    cursor: pointer;
+  }
   
   @keyframes fadeIn {
     0% {
@@ -74,7 +84,7 @@
     margin-bottom: 36px;
   }
   
-  .about-text a {
+  .link-button {
     width: 140px;
     height: 2em;
     font-size: 14px;
@@ -88,7 +98,7 @@
     justify-content: center;
   }
   
-  .about-text a:hover {
+  .link-button:hover {
     background-color: #71798f;
     color: white;
     border: 1px solid #71798f;
@@ -98,6 +108,9 @@
     .about-image img{
       width: 23em;
       height: 26em;
+    }
+    #emoji-buttons{
+      font-size: 2rem;
     }
   }
 

@@ -3,6 +3,9 @@ const techButton = document.getElementById("technologist");
 const threadButton = document.getElementById("thread");
 const babyButton = document.getElementById("baby");
 const aboutImg = document.getElementById("about-img");
+const dogLink = document.getElementById("dogLink");
+const babyLink = document.getElementById("babyLink");
+const creativeLink = document.getElementById("creativeLink");
 
 let currentButton = document.querySelector(".selected-emoji");
 // SET AND DISPLAY CURRENT IMAGE
@@ -21,3 +24,8 @@ const setNewCurrentButton = (nextCurrent) => {
     techButton.addEventListener("click", () => setNewCurrentButton(techButton));
     threadButton.addEventListener("click", () => setNewCurrentButton(threadButton));
     babyButton.addEventListener("click", () => setNewCurrentButton(babyButton));
+    dogLink.addEventListener("click", ()=> setNewCurrentButton(dogButton));
+    babyLink.addEventListener("click", () => setNewCurrentButton(babyButton));
+    creativeLink.addEventListener("click", () => setNewCurrentButton(threadButton));
+
+
