@@ -94,6 +94,13 @@
     border: 1px solid #71798f;
   }
 
+  @media (max-width: 576px) {
+    .about-image img{
+      width: 23em;
+      height: 26em;
+    }
+  }
+
   @media (min-width: 576px) and (max-width: 991px) {
     .about-image img {
       width: 50%;
