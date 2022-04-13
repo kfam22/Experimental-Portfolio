@@ -39,6 +39,9 @@
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
   }
   
   .about-image img {
@@ -46,6 +49,7 @@
     object-fit: cover;
     width: 30em;
     height: 35em;
+    margin: 0 auto;
   }
   
   .about-text {
@@ -58,7 +62,7 @@
   }
 
   #emoji-buttons{
-    font-size: 3rem;
+    font-size: 2.6rem;
     display:flex;
     justify-content: center;
   }

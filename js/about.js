@@ -8,6 +8,7 @@ const babyLink = document.getElementById("babyLink");
 const creativeLink = document.getElementById("creativeLink");
 
 let currentButton = document.querySelector(".selected-emoji");
+
 // SET AND DISPLAY CURRENT IMAGE
 const setNewCurrentButton = (nextCurrent) => {
     currentButton.classList.remove('selected-emoji')
