@@ -934,6 +934,10 @@ i:hover {
     color: white;
     border: none;
   }
+
+  .bold-subtitle{
+    margin-left: 5%;
+  }
   .small-subtitle {
     font-size: 24px;
     line-height: 1.5em;
