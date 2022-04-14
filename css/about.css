@@ -61,6 +61,10 @@
     margin-top: 1rem;
   }
 
+  .about-hello{
+    margin-left: 4%;
+  }
+
   #emoji-buttons{
     font-size: 2.6rem;
     display:flex;
